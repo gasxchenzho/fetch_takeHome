@@ -1,4 +1,4 @@
-Fetch TakeHome Application
+# Fetch TakeHome Application
 
 Description
 This is a Java Spring Boot application designed to process receipts. The main entities are Receipt and Item. 
