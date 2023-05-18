@@ -11,7 +11,35 @@ POST /receipts/process: Submit a receipt for processing and returns the ID assig
 GET /receipts/{id}/points: Returns the points associated with a given receipt id.
 
 # Setup & Installation
-You must have docker in your computer
+You must have docker in your computer, here the link to download https://www.docker.com/products/docker-desktop/
+You must have java installed https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+Ubuntu/Linux
+
+
+To install Java 17, you can follow these steps according to your operating system:
+
+## Ubuntu/Linux:
+Open Terminal.
+
+First, update the package index:
+
+sudo apt update
+Next, install the Java Development Kit (JDK). As of my knowledge cutoff in September 2021, OpenJDK 17 is the latest version. If it's available, you can install it with:
+
+sudo apt install openjdk-17-jdk
+Verify the installation with the following command:
+
+java -version
+
+## Windows
+go to the website above and download java 17, To make sure Java is installed correctly, open Command Prompt and type:
+java -version
+
+You need to manually change the JAVA_HOME environment variable to point to the installation directory of the desired Java version. After changing JAVA_HOME, you should also update your system's PATH variable to include the bin directory of the new JAVA_HOME.
+
+## MAC
+download from the website above, Open the downloaded .dmg file and follow the installation steps.
+
 
 # Running the Application
 run the command below 
