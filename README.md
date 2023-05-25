@@ -67,7 +67,9 @@ or you can directly run the command
 i have already included a case1.json file for you to use
 
 and to get the points, you can run 
+
 **curl -X GET -H "Content-Type: application/json" http://localhost:8080/receipts/{id}/points**
+
 to get the points
 
 
