@@ -2,8 +2,12 @@ package com.fetch.fetchtakehome.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Item POJO Plain Old Java Object, a straightforward type with no references to any particular frameworks.
+ */
 public class Item {
 
+    // annotation for serialization or deserialization
     @JsonProperty("shortDescription")
     private String shortDescription;
 

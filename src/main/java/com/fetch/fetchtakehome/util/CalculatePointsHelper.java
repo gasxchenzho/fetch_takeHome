@@ -4,6 +4,9 @@ package com.fetch.fetchtakehome.util;
 import com.fetch.fetchtakehome.entity.Item;
 import com.fetch.fetchtakehome.entity.Receipt;
 
+/**
+ * Helper class to calculate the points
+ */
 public class CalculatePointsHelper {
     public int calculatePoints(Receipt receipt) {
         int totalPoints = 0;
@@ -24,18 +27,11 @@ public class CalculatePointsHelper {
     private int pointsByRetailerName(String retailer) {
         int points = 0;
         for (char ch: retailer.toCharArray()) {
-            if (isAlphaNumeric(ch)) {
+            if (Character.isLetterOrDigit(ch)) {
                 points++;
             }
         }
         return points;
-    }
-
-    // helper method to tell if char is alphanumeric character
-    private boolean isAlphaNumeric(char ch) {
-        if ((ch >= '0' & ch <= '9') || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-            return true;
-        return false;
     }
 
     // 50 points if the total is a round dollar amount with no cents.
@@ -57,7 +53,7 @@ public class CalculatePointsHelper {
         return points;
     }
 
-    // 5 points for every two items on the receipt. Assume if there is 5 items, then 10 points, the last item does not count
+    // 5 points for every two items on the receipt. Assume if there are 5 items, then 10 points, the last item does not count
     private int pointsByNumberOfItems(Item[] item) {
         int points = 0;
         // get number of items / 2 and 5 points for every 2 items

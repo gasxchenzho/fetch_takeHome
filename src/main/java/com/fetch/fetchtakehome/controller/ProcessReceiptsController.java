@@ -7,10 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /***
- * This is the controller of this webserivce, it takes the url and return the json object
+ * This is the controller of this webService, it takes the url and return the json object
  */
 @RestController
-@RequestMapping("/receipts")
+// @ResponseBody + @Controller
+@RequestMapping(value = "/receipts")
 public class ProcessReceiptsController {
     @Autowired
     private ReceiptService receiptService;
@@ -22,7 +23,7 @@ public class ProcessReceiptsController {
         return receiptService.storeReceipts(receipt);
     }
 
-    @GetMapping("/{id}/points")
+    @GetMapping(value = "/{id}/points")
     public ResponseEntity<String> getPoints(@PathVariable("id") String id) {
         return receiptService.getPoints(id);
     }

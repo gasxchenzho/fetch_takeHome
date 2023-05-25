@@ -12,11 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * Implementation of Receipt Service
+ */
 @Service
 public class ReceiptServiceImpl implements ReceiptService{
 
-    private CalculatePointsHelper helper = new CalculatePointsHelper();
-    private Map<String, Integer> record = new HashMap<>();
+    private final CalculatePointsHelper helper = new CalculatePointsHelper();
+    private final Map<String, Integer> record = new HashMap<>();
 
     @Override
     public ResponseEntity<String> storeReceipts(Receipt receipt) {

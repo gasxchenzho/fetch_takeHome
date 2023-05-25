@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.lang.reflect.Field;
 
+/**
+ * Receipt POJO
+ */
 public class Receipt {
     @JsonProperty("retailer")
     private String retailer;
@@ -71,14 +74,19 @@ public class Receipt {
         this.item = item;
     }
 
+    // Java reflection mechanism to get info from compiled byteCode
+    // Java reflection, which allows us to inspect and/or modify runtime
+    // attributes of classes, interfaces, fields and methods.
     public boolean checkNull() {
         try {
             for (Field f: this.getClass().getDeclaredFields()) {
                 if (f.get(this) == null) {
+                    // todo log null based on specific field
                     return true;
                 }
             }
         } catch (Exception e) {
+            // todo change to securityException
             e.printStackTrace();
         }
         return false;
