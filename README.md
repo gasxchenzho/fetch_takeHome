@@ -13,7 +13,7 @@ GET /receipts/{id}/points: Returns the points associated with a given receipt id
 # Setup & Installation
 You must have docker in your computer, here the link to download https://www.docker.com/products/docker-desktop/
 You must have java installed https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-Ubuntu/Linux
+
 
 
 To install Java 17, you can follow these steps according to your operating system:
