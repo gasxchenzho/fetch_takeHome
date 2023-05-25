@@ -1,0 +1,7 @@
+com\fetch\fetchtakehome\entity\Item.class
+com\fetch\fetchtakehome\entity\Receipt.class
+com\fetch\fetchtakehome\util\CalculatePointsHelper.class
+com\fetch\fetchtakehome\FetchTakeHomeApplication.class
+com\fetch\fetchtakehome\service\ReceiptServiceImpl.class
+com\fetch\fetchtakehome\service\ReceiptService.class
+com\fetch\fetchtakehome\controller\ProcessReceiptsController.class
