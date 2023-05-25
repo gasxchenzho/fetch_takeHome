@@ -54,10 +54,18 @@ And after the image has been built, run command
 
 And you should be able to run the application in your computer, just use post or get http request to your local port
 
-e.g localhost:8080/receipts/process and POST json payload you should get something like 
+e.g 
+**localhost:8080/receipts/process** 
+
+and POST json payload you should get something like 
+
 {"id": "7fb1377b-b223-49d9-a31a-5a02701dd310"}
 
-or localhost:8080/receipts/{id you get from post}/points should give you something like 
+or 
+
+**localhost:8080/receipts/{id you get from post}/points**
+
+should give you something like 
 {"points": 32}
 
 or you can directly run the command 
