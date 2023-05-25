@@ -62,12 +62,12 @@ or localhost:8080/receipts/{id you get from post}/points should give you somethi
 
 or you can directly run the command 
 
-curl -X POST -H "Content-Type: application/json" -d @case1.json http://localhost:8080/receipts/process  
+**curl -X POST -H "Content-Type: application/json" -d @case1.json http://localhost:8080/receipts/process**
 
 i have already included a case1.json file for you to use
 
 and to get the points, you can run 
-curl -X GET -H "Content-Type: application/json" http://localhost:8080/receipts/{id}/points
+**curl -X GET -H "Content-Type: application/json" http://localhost:8080/receipts/{id}/points**
 to get the points
 
 
