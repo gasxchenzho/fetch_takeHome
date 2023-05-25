@@ -46,7 +46,7 @@ run the command below
 at the root of the project directory, where you see Dockerfile
 run command 
 
-* docker build -t fetch-take-home . *
+** docker build -t fetch-take-home . **
 
 And after the image has been built, run command 
 * docker run -p 8080:8080 fetch-take-home *
