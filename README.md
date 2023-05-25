@@ -13,7 +13,7 @@ GET /receipts/{id}/points: Returns the points associated with a given receipt id
 # Setup & Installation
 You must have docker in your computer, here the link to download https://www.docker.com/products/docker-desktop/
 You must have java installed https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-Ubuntu/Linux
+
 
 
 To install Java 17, you can follow these steps according to your operating system:
@@ -43,9 +43,35 @@ download from the website above, Open the downloaded .dmg file and follow the in
 
 # Running the Application
 run the command below 
-docker run -d -p 8080:8080 fetch-take-home-container fetch-take-home
+at the root of the project directory, where you see Dockerfile
+run command 
+
+**docker build -t fetch-take-home .**
+
+And after the image has been built, run command 
+
+**docker run -p 8080:8080 fetch-take-home**
 
 And you should be able to run the application in your computer, just use post or get http request to your local port
-e.g localhost:8080/receipts/process and POST json payload you should get something like {"id": "7fb1377b-b223-49d9-a31a-5a02701dd310"}
-or localhost:8080/receipts/{id you get from post}/points should give you something like {"points": 32}
+
+e.g localhost:8080/receipts/process and POST json payload you should get something like 
+{"id": "7fb1377b-b223-49d9-a31a-5a02701dd310"}
+
+or localhost:8080/receipts/{id you get from post}/points should give you something like 
+{"points": 32}
+
+or you can directly run the command 
+
+**curl -X POST -H "Content-Type: application/json" -d @case1.json http://localhost:8080/receipts/process**
+
+i have already included a case1.json file for you to use
+
+and to get the points, you can run 
+
+**curl -X GET -H "Content-Type: application/json" http://localhost:8080/receipts/{id}/points**
+
+to get the points
+
+
+
 
